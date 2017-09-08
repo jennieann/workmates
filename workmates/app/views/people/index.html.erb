@@ -1,8 +1,13 @@
 <h1>People</h1>
-        <%= link_to "New Person", new_person_path %>
-        <div id="people">
-          <% @people.each do |person| %>
-            <h2><%= link_to person.name, person %></h2>
-            <p><%= person.title %></p>
-          <% end %>
+  <%= link_to "New Person", new_person_path, class: "print" %>
+  <div id="people">
+      <% @people.each do |person| %>
+      <div class="person">
+        <%= image_tag person.image.url(:large), class: "portrait" %>
+        <div class="plate">
+          <%= link_to fullname(person), person, class: "name"%>
+          <p class="title"><%= person.title %></p>
+        </div>
+      </div>
+    <% end %>
 </div>

@@ -1,4 +1,9 @@
-<h1><%=@person.name%> <%=@person.lastname %></h1>
+<%= image_tag @person.image.url(:large) %>
+<p><%=@person.name%> <%=@person.lastname %></p>
+<p><%= @person.title %></p>
+
+
+
 <%= link_to "Edit Person", edit_person_path(@person) %>
 <%= link_to "Delete Person",
             person_path(@person),
