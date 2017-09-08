@@ -24,4 +24,5 @@ RSpec.feature "Users can create a new personprofile" do
           expect(page).to have_content "Person has not been created."
           expect(page).to have_content "Name can't be blank"
   end
+
 end
