@@ -14,7 +14,8 @@ class PeopleController < ApplicationController
       flash[:notice] = "Person has been created."
       redirect_to @person
     else
-      # nothing yet
+      flash[:notice] = "Person has not been created."
+      render "new"
     end
   end
 
