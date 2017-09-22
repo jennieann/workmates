@@ -1,14 +1,19 @@
-<h1>People</h1>
-  <%= link_to "New Person", new_person_path, class: "print" %>
-  <div id="people">
-      <% @people.each do |person| %>
-      <div class="person">
-        <%= image_tag person.image.url(:large), class: "portrait" %>
-        <div class="plate">
-          <%= link_to fullname(person), person, class: "name"%>
-          <i class="fa fa-pencil"></i>
-          <p class="title"><%= person.title %></p>
+<% if logged_in? %>
+  <%= link_to "Log out", logout_path, method: :delete %>
+<% end %>
+<div class="people">
+  <h1>People</h1>
+    <%= link_to "New Person", new_person_path, class: "print" %>
+    <div id="people">
+        <% @people.each do |person| %>
+        <div class="person">
+          <%= image_tag person.image.url(:large), class: "portrait" %>
+          <div class="plate">
+            <%= link_to fullname(person), person, class: "name"%>
+            <i class="fa fa-pencil"></i>
+            <p class="title"><%= person.title %></p>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+  </div>
 </div>

@@ -8,9 +8,12 @@
     margin: 0;
 }
 
-body {
+.people {
     font-family: "apercu";
     background-color: #ccc;
+    float: left;
+    white-space:nowrap;
+    padding-left: 35px;
 }
 
 .person {
