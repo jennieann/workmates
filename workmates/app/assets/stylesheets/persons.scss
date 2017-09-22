@@ -1,19 +1,11 @@
 // Place all the styles related to the persons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "font-awesome";
+
 @page {
     size: A4;
     margin: 0;
-}
-@media print {
-    html, body {
-        width: 210mm;
-        height: 297mm;
-    }
-
-    .toolbar {
-        display: none;
-    }
 }
 
 body {
@@ -44,7 +36,10 @@ body {
 .person .name {
     font-size: 10mm;
     color: #000;
+
+
 }
+
 .person .title {
     font-size: 8mm;
 }
@@ -54,11 +49,22 @@ body {
 }
 
 @media print {
+  html, body {
+      width: 210mm;
+      height: 297mm;
+  }
+
+  .toolbar {
+      display: none;
+  }
   .print {
     display: none;
   }
   .plate .name {
     text-decoration: none;
 
+  }
+  h1 {
+    display: none;
   }
 }
